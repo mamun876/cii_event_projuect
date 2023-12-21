@@ -23,6 +23,16 @@
                     </li>
                     <li class="mega-menu mega-menu-sm">
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Galleries</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/Galleries">All Gallery</a></li>
+                            <li><a href="/Galleries/create">Add New Gallery</a></li>
+                      
+                        </ul>
+                    </li>
+                    <li class="mega-menu mega-menu-sm">
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Layouts</span>
                         </a>
                         <ul aria-expanded="false">

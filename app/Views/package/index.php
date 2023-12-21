@@ -28,10 +28,10 @@
         <div class="nav-header">
             <div class="brand-logo">
                 <a href="index.html">
-                    <b class="logo-abbr"><img src="assets/images/logo.png" alt=""> </b>
-                    <span class="logo-compact"><img src="assets/images/logo-compact.png" alt=""></span>
+                    <b class="logo-abbr"><img src="<?=site_url('assets/images/logo.png')?>" alt=""> </b>
+                    <span class="logo-compact"><img src="<?=site_url('assets/images/logo-compact.png')?>" alt=""></span>
                     <span class="brand-title">
-                        <img src="assets/images/logo-text.png" alt="">
+                        <img src="<?=site_url('assets/images/logo-text.png')?>" alt="">
                     </span>
                 </a>
             </div>

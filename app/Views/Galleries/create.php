@@ -78,30 +78,49 @@
 
             <div class="container-fluid mt-3">
 
-            <form action="<?=('/package/store')?>" method="post" enctype="multipart/form-data">
-      <div class="form-group">
-        <label for="title">Title</label>
-        <input type="text" class="form-control" id="title" placeholder="Enter title" name="title" required >
-      </div>
-
-      <div class="form-group">
-        <label for="subtitle">Subtitle</label>
-        <input type="text" class="form-control" id="subtitle" placeholder="Enter subtitle" name="subtitle" >
-      </div>
-
-      <div class="form-group">
-        <label for="price">Price</label>
-        <input type="text" class="form-control" id="price" placeholder="Enter price" name="price" required >
-      </div>
-
-      <div class="form-group">
-        <label for="service_include">Service Includes</label>
-        <input class="form-control" type="text" id="service_include"  placeholder="Enter service details" name="service_include" ></input>
-      </div>
-
-      <button type="submit" class="btn btn-primary">Submit</button>
-      <button type="submit" class="btn btn-danger">Update</button>
-    </form>
+                <form>
+                    <div class="form-group">
+                        <label for="id">ID</label>
+                        <input type="text" class="form-control" id="id" placeholder="Enter ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="booking_id">Booking ID</label>
+                        <input type="text" class="form-control" id="booking_id" placeholder="Enter Booking ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title" placeholder="Enter Title">
+                    </div>
+                    <div class="form-group">
+                        <label for="caption">Caption</label>
+                        <input type="text" class="form-control" id="caption" placeholder="Enter Caption">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="description" rows="3" placeholder="Enter Description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="filename">Filename</label>
+                        <input type="text" class="form-control" id="filename" placeholder="Enter Filename">
+                    </div>
+                    <div class="form-group">
+                        <label for="alternative_text">Alternative Text</label>
+                        <input type="text" class="form-control" id="alternative_text" placeholder="Enter Alternative Text">
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Type</label>
+                        <input type="text" class="form-control" id="type" placeholder="Enter Type">
+                    </div>
+                    <div class="form-group">
+                        <label for="size">Size</label>
+                        <input type="text" class="form-control" id="size" placeholder="Enter Size">
+                    </div>
+                    <div class="form-group">
+                        <label for="related_id">Related ID</label>
+                        <input type="text" class="form-control" id="related_id" placeholder="Enter Related ID">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </form>
 
 
 
@@ -116,7 +135,7 @@
         <!--**********************************
             Footer start
         ***********************************-->
-        <?= $this->include('includes/Footer')?>
+        <?= $this->include('includes/Footer') ?>
         <!--**********************************
             Footer end
         ***********************************-->

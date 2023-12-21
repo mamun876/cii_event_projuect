@@ -20,14 +20,6 @@
 
 <body>
 
-    <!--*******************
-        Preloader end
-    ********************-->
-
-
-    <!--**********************************
-        Main wrapper start
-    ***********************************-->
     <div id="main-wrapper">
 
         <!--**********************************
@@ -36,10 +28,10 @@
         <div class="nav-header">
             <div class="brand-logo">
                 <a href="index.html">
-                    <b class="logo-abbr"><img src="assets/images/logo.png" alt=""> </b>
-                    <span class="logo-compact"><img src="assets/images/logo-compact.png" alt=""></span>
+                    <b class="logo-abbr"><img src="<?=site_url('assets/images/logo.png')?>" alt=""> </b>
+                    <span class="logo-compact"><img src="<?=site_url('assets/images/logo-compact.png')?>" alt=""></span>
                     <span class="brand-title">
-                        <img src="assets/images/logo-text.png" alt="">
+                        <img src="<?=site_url('assets/images/logo-text.png')?>" alt="">
                     </span>
                 </a>
             </div>
@@ -78,30 +70,66 @@
 
             <div class="container-fluid mt-3">
 
-            <form action="<?=('/package/store')?>" method="post" enctype="multipart/form-data">
-      <div class="form-group">
-        <label for="title">Title</label>
-        <input type="text" class="form-control" id="title" placeholder="Enter title" name="title" required >
-      </div>
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Booking_ID</th>
+                                            <th>Title</th>
+                                            <th>Caption</th>
+                                            <th>Description</th>
+                                            <th>FileName</th>
+                                            <th>Alternative_Text</th>
+                                            <th>Type</th>
+                                            <th>Size</th>
+                                            <th>Related_ID</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                   
+                                    <tbody>
+                                        <?php
+                                        foreach ($items as $item) :
+                                        ?>
+                                            <tr>
+                                                <td><?php echo $item['id'] ?></td>
+                                                <td><?php echo $item['booking_id'] ?></td>
+                                                <td><?php echo $item['title'] ?></td>
+                                                <td><?php echo $item['caption'] ?></td>
+                                                <td><?php echo $item['description'] ?></td>
+                                                <td><?php echo $item['filename'] ?></td>
+                                                <td><?php echo $item['alternate_text'] ?></td>
+                                                <td><?php echo $item['type'] ?></td>
+                                                <td><?php echo $item['size'] ?></td>
+                                                <td><?php echo $item['relate_id'] ?></td>
 
-      <div class="form-group">
-        <label for="subtitle">Subtitle</label>
-        <input type="text" class="form-control" id="subtitle" placeholder="Enter subtitle" name="subtitle" >
-      </div>
-
-      <div class="form-group">
-        <label for="price">Price</label>
-        <input type="text" class="form-control" id="price" placeholder="Enter price" name="price" required >
-      </div>
-
-      <div class="form-group">
-        <label for="service_include">Service Includes</label>
-        <input class="form-control" type="text" id="service_include"  placeholder="Enter service details" name="service_include" ></input>
-      </div>
-
-      <button type="submit" class="btn btn-primary">Submit</button>
-      <button type="submit" class="btn btn-danger">Update</button>
-    </form>
+                                                <td>
+                                                    <a class="btn btn-danger" href="<?php echo base_url('Galleries/delete/' . $item['id']) ?>">
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                    <a class="btn btn-success" href="<?php echo base_url('Galleries/edit/' . $item['id']) ?>">
+                                                        <i class="fa fa-edit"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach ?>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                        <th>ID</th>
+                                            <th>Booking_ID</th>
+                                            <th>Title</th>
+                                            <th>Caption</th>
+                                            <th>Description</th>
+                                            <th>FileName</th>
+                                            <th>Alternative_Text</th>
+                                            <th>Type</th>
+                                            <th>Size</th>
+                                            <th>Related_ID</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
 
 
 
@@ -116,7 +144,7 @@
         <!--**********************************
             Footer start
         ***********************************-->
-        <?= $this->include('includes/Footer')?>
+        <?= $this->include('includes/Footer') ?>
         <!--**********************************
             Footer end
         ***********************************-->
