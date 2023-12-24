@@ -28,10 +28,10 @@
         <div class="nav-header">
             <div class="brand-logo">
                 <a href="index.html">
-                    <b class="logo-abbr"><img src="<?= site_url('assets/images/logo.png') ?>" alt=""> </b>
-                    <span class="logo-compact"><img src="<?= site_url('assets/images/logo-compact.png') ?>" alt=""></span>
+                    <b class="logo-abbr"><img src="<?=site_url('assets/images/logo.png')?>" alt=""> </b>
+                    <span class="logo-compact"><img src="<?=site_url('assets/images/logo-compact.png')?>" alt=""></span>
                     <span class="brand-title">
-                        <img src="<?= site_url('assets/images/logo-text.png') ?>" alt="">
+                        <img src="<?=site_url('assets/images/logo-text.png')?>" alt="">
                     </span>
                 </a>
             </div>
@@ -69,18 +69,16 @@
 
 
             <div class="container-fluid mt-3">
-                <div class="events_containe">
-                    <h3 class="d-flex justify-content-center">Packages List</h3>
-                </div>
 
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Title</th>
-                            <th>Sub_Title</th>
-                            <th>Price</th>
-                            <th>service_include</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Subject</th>
+                            <th>Message</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -94,17 +92,16 @@
                         ?>
                             <tr>
                                 <td><?= $n + 1 ?></td>
-                                <td><?= $item['title'] ?></td>
-                                <td><?= $item['subtitle'] ?></td>
-                                <td><?= $item['price'] ?></td>
-                                <td><?= $item['service_include'] ?></td>
+                                <td><?= $item['name'] ?></td>
+                                <td><?= $item['email'] ?></td>
+                                <td><?= $item['subject'] ?></td>
+                                <td><?= $item['message'] ?></td>
+                                <td><?= $item['status'] ?></td>
                                 <td>
-                                    <a class="btn btn-danger" href="<?php echo base_url('package/delete/' . $item['id']) ?>">
+                                    <a class="btn btn-danger" href="<?php echo base_url('Message/delete/' . $item['id']) ?>">
                                         <i class="fa fa-trash"></i>
                                     </a>
-                                    <a class="btn btn-success" href="<?php echo base_url('/package/edit/' . $item['id']) ?>">
-                                        <i class="fa fa-edit"></i>
-                                    </a>
+                                   
                                 </td>
                             </tr>
                         <?php $n++;
@@ -112,11 +109,12 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th>ID</th>
-                            <th>Title</th>
-                            <th>Sub_Title</th>
-                            <th>Price</th>
-                            <th>service_include</th>
+                        <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Subject</th>
+                            <th>Message</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </tfoot>

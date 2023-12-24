@@ -33,6 +33,47 @@
                     </li>
                     <li class="mega-menu mega-menu-sm">
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Message</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/Message">All Message</a></li>
+                            <li><a href="/Message/create">New Message</a></li>
+                            <li><a href="/Message/create">Unread Message</a></li>
+                      
+                        </ul>
+                    </li>
+                    <li class="mega-menu mega-menu-sm">
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Events</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/Events">All Events</a></li>
+                            <li><a href="/Events/create">Upcoming Events</a></li>
+                           
+                      
+                        </ul>
+                    </li>
+                    <li class="mega-menu mega-menu-sm">
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Guests</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/Guests">All Guest</a></li>
+                      
+                        </ul>
+                    </li>
+                    <li class="mega-menu mega-menu-sm">
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Booking</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/weddingbooking">Confirm</a></li>
+                            <li><a href="/weddingbooking">Pending</a></li>
+                      
+                        </ul>
+                    </li>
+                    <li class="mega-menu mega-menu-sm">
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Layouts</span>
                         </a>
                         <ul aria-expanded="false">

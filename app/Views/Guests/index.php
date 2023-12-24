@@ -70,18 +70,24 @@
 
             <div class="container-fluid mt-3">
                 <div class="events_containe">
-                    <h3 class="d-flex justify-content-center">Packages List</h3>
+                    <h3 class="d-flex justify-content-center">Guest List</h3>
                 </div>
 
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Title</th>
-                            <th>Sub_Title</th>
-                            <th>Price</th>
-                            <th>service_include</th>
-                            <th>Action</th>
+                            <th>Booking_ID</th>
+                            <th>Fullname</th>
+                            <th>Guestname</th>
+                            <th>Address</th>
+                            <th>State</th>
+                            <th>Zipcode</th>
+                            <th>Priority</th>
+                            <th>Out_of_town</th>
+                            <th>Relationship</th>
+                            <th>Tracks_and_gifts</th>
+                            <th>City</th>
                         </tr>
                     </thead>
 
@@ -90,21 +96,29 @@
                         $n = 0;
                         // print_r($items);
                         foreach ($items as $item) :
-                            # code...
+
                         ?>
                             <tr>
                                 <td><?= $n + 1 ?></td>
-                                <td><?= $item['title'] ?></td>
-                                <td><?= $item['subtitle'] ?></td>
-                                <td><?= $item['price'] ?></td>
-                                <td><?= $item['service_include'] ?></td>
+                                <td><?= $item['booking_id'] ?></td>
+                                <td><?= $item['fullname'] ?></td>
+                                <td><?= $item['guestname'] ?></td>
+                                <td><?= $item['address'] ?></td>
+                                <td><?= $item['state'] ?></td>
+                                <td><?= $item['zipcode'] ?></td>
+                                <td><?= $item['priority'] ?></td>
+                                <td><?= $item['out_of_town'] ?></td>
+                                <td><?= $item['relationship'] ?></td>
+                                <td><?= $item['tracks_and_gifts'] ?></td>
+                                <td><?= $item['city'] ?></td>
                                 <td>
-                                    <a class="btn btn-danger" href="<?php echo base_url('package/delete/' . $item['id']) ?>">
+                                    <a class="btn btn-danger" href="<?php echo base_url('Guests/delete/' . $item['id']) ?>">
                                         <i class="fa fa-trash"></i>
                                     </a>
-                                    <a class="btn btn-success" href="<?php echo base_url('/package/edit/' . $item['id']) ?>">
+                                    <a class="btn btn-success" href="<?php echo base_url('/Guests/edit/' . $item['id']) ?>">
                                         <i class="fa fa-edit"></i>
                                     </a>
+
                                 </td>
                             </tr>
                         <?php $n++;
@@ -113,11 +127,17 @@
                     <tfoot>
                         <tr>
                             <th>ID</th>
-                            <th>Title</th>
-                            <th>Sub_Title</th>
-                            <th>Price</th>
-                            <th>service_include</th>
-                            <th>Action</th>
+                            <th>Booking_ID</th>
+                            <th>Fullname</th>
+                            <th>Guestname</th>
+                            <th>Address</th>
+                            <th>State</th>
+                            <th>Zipcode</th>
+                            <th>Priority</th>
+                            <th>Out_of_town</th>
+                            <th>Relationship</th>
+                            <th>Tracks_and_gifts</th>
+                            <th>City</th>
                         </tr>
                     </tfoot>
                 </table>

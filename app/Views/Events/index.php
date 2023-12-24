@@ -70,17 +70,22 @@
 
             <div class="container-fluid mt-3">
                 <div class="events_containe">
-                    <h3 class="d-flex justify-content-center">Packages List</h3>
+                    <h3 class="d-flex justify-content-center">Events List</h3>
                 </div>
 
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>ID</th>
+                            <th>Booking_ID</th>
                             <th>Title</th>
-                            <th>Sub_Title</th>
-                            <th>Price</th>
-                            <th>service_include</th>
+                            <th>Location</th>
+                            <th>Date_Created</th>
+                            <th>Color</th>
+                            <th>Start</th>
+                            <th>End</th>
+                            <th>Desc</th>
+                            <th>IMG</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -94,17 +99,23 @@
                         ?>
                             <tr>
                                 <td><?= $n + 1 ?></td>
+                                <td><?= $item['booking_id'] ?></td>
                                 <td><?= $item['title'] ?></td>
-                                <td><?= $item['subtitle'] ?></td>
-                                <td><?= $item['price'] ?></td>
-                                <td><?= $item['service_include'] ?></td>
+                                <td><?= $item['location'] ?></td>
+                                <td><?= $item['date_created'] ?></td>
+                                <td><?= $item['color'] ?></td>
+                                <td><?= $item['start'] ?></td>
+                                <td><?= $item['end'] ?></td>
+                                <td><?= $item['descrip'] ?></td>
+                                <td><?= $item['img'] ?></td>
                                 <td>
-                                    <a class="btn btn-danger" href="<?php echo base_url('package/delete/' . $item['id']) ?>">
+                                    <a class="btn btn-danger" href="<?php echo base_url('Events/delete/' . $item['id']) ?>">
                                         <i class="fa fa-trash"></i>
                                     </a>
                                     <a class="btn btn-success" href="<?php echo base_url('/package/edit/' . $item['id']) ?>">
                                         <i class="fa fa-edit"></i>
                                     </a>
+
                                 </td>
                             </tr>
                         <?php $n++;
@@ -113,10 +124,15 @@
                     <tfoot>
                         <tr>
                             <th>ID</th>
+                            <th>Booking_ID</th>
                             <th>Title</th>
-                            <th>Sub_Title</th>
-                            <th>Price</th>
-                            <th>service_include</th>
+                            <th>Location</th>
+                            <th>Date_Created</th>
+                            <th>Color</th>
+                            <th>Start</th>
+                            <th>End</th>
+                            <th>Desc</th>
+                            <th>IMG</th>
                             <th>Action</th>
                         </tr>
                     </tfoot>

@@ -28,10 +28,10 @@
         <div class="nav-header">
             <div class="brand-logo">
                 <a href="index.html">
-                    <b class="logo-abbr"><img src="<?=site_url('assets/images/logo.png')?>" alt=""> </b>
-                    <span class="logo-compact"><img src="<?=site_url('assets/images/logo-compact.png')?>" alt=""></span>
+                    <b class="logo-abbr"><img src="<?= site_url('assets/images/logo.png') ?>" alt=""> </b>
+                    <span class="logo-compact"><img src="<?= site_url('assets/images/logo-compact.png') ?>" alt=""></span>
                     <span class="brand-title">
-                        <img src="<?=site_url('assets/images/logo-text.png')?>" alt="">
+                        <img src="<?= site_url('assets/images/logo-text.png') ?>" alt="">
                     </span>
                 </a>
             </div>
@@ -69,67 +69,70 @@
 
 
             <div class="container-fluid mt-3">
+                <div class="events_containe">
+                    <h3 class="d-flex justify-content-center">Gallery</h3>
+                </div>
 
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Booking_ID</th>
-                                            <th>Title</th>
-                                            <th>Caption</th>
-                                            <th>Description</th>
-                                            <th>FileName</th>
-                                            <th>Alternative_Text</th>
-                                            <th>Type</th>
-                                            <th>Size</th>
-                                            <th>Related_ID</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                   
-                                    <tbody>
-                                        <?php
-                                        foreach ($items as $item) :
-                                        ?>
-                                            <tr>
-                                                <td><?php echo $item['id'] ?></td>
-                                                <td><?php echo $item['booking_id'] ?></td>
-                                                <td><?php echo $item['title'] ?></td>
-                                                <td><?php echo $item['caption'] ?></td>
-                                                <td><?php echo $item['description'] ?></td>
-                                                <td><?php echo $item['filename'] ?></td>
-                                                <td><?php echo $item['alternate_text'] ?></td>
-                                                <td><?php echo $item['type'] ?></td>
-                                                <td><?php echo $item['size'] ?></td>
-                                                <td><?php echo $item['relate_id'] ?></td>
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Booking_ID</th>
+                            <th>Title</th>
+                            <th>Caption</th>
+                            <th>Description</th>
+                            <th>FileName</th>
+                            <th>Alternative_Text</th>
+                            <th>Type</th>
+                            <th>Size</th>
+                            <th>Related_ID</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
 
-                                                <td>
-                                                    <a class="btn btn-danger" href="<?php echo base_url('Galleries/delete/' . $item['id']) ?>">
-                                                        <i class="fa fa-trash"></i>
-                                                    </a>
-                                                    <a class="btn btn-success" href="<?php echo base_url('Galleries/edit/' . $item['id']) ?>">
-                                                        <i class="fa fa-edit"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        <?php endforeach ?>
-                                    </tbody>
-                                    <tfoot>
-                                        <tr>
-                                        <th>ID</th>
-                                            <th>Booking_ID</th>
-                                            <th>Title</th>
-                                            <th>Caption</th>
-                                            <th>Description</th>
-                                            <th>FileName</th>
-                                            <th>Alternative_Text</th>
-                                            <th>Type</th>
-                                            <th>Size</th>
-                                            <th>Related_ID</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </tfoot>
-                                </table>
+                    <tbody>
+                        <?php
+                        foreach ($items as $item) :
+                        ?>
+                            <tr>
+                                <td><?php echo $item['id'] ?></td>
+                                <td><?php echo $item['booking_id'] ?></td>
+                                <td><?php echo $item['title'] ?></td>
+                                <td><?php echo $item['caption'] ?></td>
+                                <td><?php echo $item['description'] ?></td>
+                                <td><?php echo $item['filename'] ?></td>
+                                <td><?php echo $item['alternate_text'] ?></td>
+                                <td><?php echo $item['type'] ?></td>
+                                <td><?php echo $item['size'] ?></td>
+                                <td><?php echo $item['relate_id'] ?></td>
+
+                                <td>
+                                    <a class="btn btn-danger" href="<?php echo base_url('Galleries/delete/' . $item['id']) ?>">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                    <a class="btn btn-success" href="<?php echo base_url('Galleries/edit/' . $item['id']) ?>">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php endforeach ?>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>ID</th>
+                            <th>Booking_ID</th>
+                            <th>Title</th>
+                            <th>Caption</th>
+                            <th>Description</th>
+                            <th>FileName</th>
+                            <th>Alternative_Text</th>
+                            <th>Type</th>
+                            <th>Size</th>
+                            <th>Related_ID</th>
+                            <th>Action</th>
+                        </tr>
+                    </tfoot>
+                </table>
 
 
 

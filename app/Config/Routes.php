@@ -24,4 +24,24 @@ $routes->get('signout', 'SigninController::logout');
 // Gallery routes
 $routes->get('/Galleries', 'GalleryController::index');
 $routes->get('/Galleries/create', 'GalleryController::create');
+$routes->get('Galleries/delete/(:num)', 'GalleryController::delete/$1');
+
+
+// Contact Routes
+$routes->get('/Message', 'MessageController::index');
+$routes->get('Message/delete/(:num)', 'MessageController::delete/$1');
+
+// Events Routes
+$routes->get('/Events', 'EventsController::index');
+$routes->get('Events/delete/(:num)', 'EventsController::delete/$1');
+
+// Guests Routes
+$routes->get('/Guests', 'GuestsController::index');
+$routes->get('Guests/delete/(:num)', 'GuestsController::delete/$1');
+
+// weddingbooking Routes
+$routes->get('/weddingbooking', 'WeddingBoookingController::index');
+$routes->get('weddingbooking/delete/(:num)', 'WeddingBoookingController::delete/$1');
+
+
 
